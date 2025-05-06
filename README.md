@@ -1,4 +1,3 @@
-```
 # Conditional Resume Generator: CGAN & Attention-based GAN
 
 This repository showcases a research-driven NLP project leveraging **Conditional Generative Adversarial Networks (CGANs)** and **Attention Mechanisms** to generate synthetic professional resumes. The project specifically explores controlled, label-conditioned text generation using PyTorch, emphasizing model interpretability, training stability, and practical NLP applications.
@@ -34,14 +33,18 @@ The project explicitly focuses on capturing professional tone, realistic formatt
 - **Conditional Batch Normalization**: Improves training stability and diversity in text generation tasks
 - **Orthogonal Regularization and Spectral Normalization**: Explicitly stabilize GAN training and reduce mode collapse
 
-## 📊 Example Outputs
+## 🧪 Prompt vs CGAN Output (Failure Case Gallery)
+
+The CGAN was conditioned on simple prompts reflecting job titles and industries. Below are raw outputs from the model, revealing key failure patterns that motivate the shift to an Attention-based architecture.
 
 <div align="center"> <table> <tr> <th>Prompt: "Senior Accountant in Finance"</th> <th>Prompt: "Software Developer in Tech"</th> <th>Prompt: "Farmer in Agriculture"</th> </tr> <tr> <td><img src="images/CGANFinance.png" alt="Finance Resume" width="300"/></td> <td><img src="images/CGANSD.png" alt="Tech Resume" width="300"/></td> <td><img src="images/CGANFarmer.png" alt="Agriculture Resume" width="300"/></td> </tr> </table> </div>
 
-**Common Issues Observed**:
-- Repetition of phrases or entities (e.g., "Oracle Corporation", "FSNS")
-- Lack of coherent formatting or section separation
-- Fabricated acronyms and implausible role structures
+---
+
+### 🔍 Common Issues Observed
+- **Repetition of phrases or entities** (e.g., `"Oracle Corporation"`, `"FSNS"`, `"analyzed and analyzed"`)
+- **Lack of coherent formatting or section structure**
+- **Hallucinated acronyms and implausible organizational references**
 
 ## 🛠️ Technologies Used
 
@@ -62,4 +65,4 @@ The project explicitly focuses on capturing professional tone, realistic formatt
 ## 🚧 Project Status
 
 Actively developing and experimenting with various GAN architectures and training strategies. Contributions and suggestions are welcome.
-```
+
