@@ -1,5 +1,9 @@
 # Conditional Resume Generator: CGAN & Attention-based GAN
 
+> 📓 **Full Notebook Access**:  
+> The full `resume_cgan.ipynb` notebook (including model architecture and training code) is available upon request.  
+> Please contact the author if you're a reviewer, collaborator, or recruiter seeking access.
+
 This repository showcases a research-driven NLP project leveraging **Conditional Generative Adversarial Networks (CGANs)** and **Attention Mechanisms** to generate synthetic professional resumes. The project specifically explores controlled, label-conditioned text generation using PyTorch, emphasizing model interpretability, training stability, and practical NLP applications.
 
 ## 📌 Project Overview
