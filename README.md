@@ -1,41 +1,49 @@
-# Conditional Resume Generator: CGAN & Attention-based GAN
+# ✨ Attention-Grabbing Resumes: Conditional Text Generation for Customized Applications
 
-> 📓 **Full Notebook Access**:  
-> The full `resume_cgan.ipynb` notebook (including model architecture and training code) is available upon request.  
-> Please contact the author if you're a reviewer, collaborator, or recruiter seeking access.
+## Overview
 
-This repository showcases a research-driven NLP project leveraging **Conditional Generative Adversarial Networks (CGANs)** and **Attention Mechanisms** to generate synthetic professional resumes. The project specifically explores controlled, label-conditioned text generation using PyTorch, emphasizing model interpretability, training stability, and practical NLP applications.
+This project leverages advanced deep learning techniques—specifically Conditional Generative Adversarial Networks (CGANs) with attention mechanisms—to automatically generate targeted, industry-specific resume content. By conditioning on specific job roles or sectors, the model produces contextually relevant resume bullet points that help applicants tailor their resumes effectively and quickly for multiple job opportunities.
 
-## 📌 Project Overview
-
-This project implements and compares two advanced generative architectures:
-
-- **Conditional GAN (CGAN)**:
-  - Incorporates label embedding for conditional generation
-  - Employs adversarial training to guide realistic resume text synthesis
-
-- **Attention-based GAN**:
-  - Uses Multihead Attention to enhance context-sensitive generation
-  - Implements Conditional Batch Normalization for improved conditioning and diversity
-
-Both models generate professional resumes explicitly conditioned on specific job roles and industries, such as:
-- **"Senior Analyst in Finance"**
-- **"Software Developer in Tech"**
-
-The project explicitly focuses on capturing professional tone, realistic formatting, coherent structure, and contextually relevant skill descriptions.
+---
 
 ## 🎯 Objectives
 
-- Evaluate the impact of conditional embeddings and attention mechanisms on structured NLP generation tasks
-- Investigate GAN training strategies under conditions of limited labeled data
-- Generate adversarially robust synthetic resumes to test downstream HR parsing systems (ATS, keyword matching algorithms)
+- **Primary Goal**: Automatically generate high-quality, industry-targeted resume bullet points using conditional generative modeling.
+- **Practical Impact**: Reduce the time and effort required for applicants to tailor their resumes for various roles, significantly enhancing application efficiency and effectiveness.
+- **Technical Innovation**: Demonstrate advanced generative modeling and attention mechanisms to produce coherent, contextually-aware textual content.
 
-## 🚀 Key Components
+---
 
-- **Conditional Label Embeddings**: Clearly guide GAN outputs to produce resumes relevant to specified roles or sectors
-- **Multihead Attention**: Explicitly captures dependencies and context across generated resume tokens
-- **Conditional Batch Normalization**: Improves training stability and diversity in text generation tasks
-- **Orthogonal Regularization and Spectral Normalization**: Explicitly stabilize GAN training and reduce mode collapse
+## 🛠️ Methods and Architecture
+
+### Conditional Generative Adversarial Networks (CGANs)
+
+- **Generator Network**: Takes industry/job-category labels and generates coherent, relevant resume bullet points.
+- **Discriminator Network**: Evaluates realism and relevance, explicitly conditioning outputs on industry/job labels to guide meaningful generation.
+
+### Attention Mechanisms
+
+- Explicitly integrates attention layers into the generator to improve textual coherence and ensure key industry-specific details are highlighted clearly.
+- Provides enhanced interpretability and contextual accuracy.
+
+---
+
+## 📐 Model Workflow
+
+1. **Data Preparation**
+   - Gathered and processed a curated dataset of high-quality resume examples spanning multiple industries (Tech, Finance, Agriculture).
+   - Implemented custom preprocessing scripts to clean and structure textual data.
+
+2. **CGAN with Attention Training**
+   - Designed and implemented CGAN architecture with explicit attention layers.
+   - Leveraged PyTorch for training, optimization, and performance tuning.
+   - Conducted systematic hyperparameter tuning for optimal performance.
+
+3. **Evaluation and Validation**
+   - Generated resume text conditioned explicitly on specified industry labels.
+   - Evaluated qualitative coherence, realism, and industry relevance through manual review and quantitative evaluation metrics (BLEU, ROUGE).
+
+---
 
 ## 🧪 Prompt vs CGAN Output (Failure Case Gallery)
 
@@ -70,28 +78,71 @@ prompt_text = (
 
 ---
 
-### 🔍 Common Issues Observed
-- **Repetition of phrases or entities** (e.g., `"Oracle Corporation"`, `"FSNS"`, `"analyzed and analyzed"`)
-- **Lack of coherent formatting or section structure**
-- **Hallucinated acronyms and implausible organizational references**
+## 🚧 Limitations & Future Directions
 
-## 🛠️ Technologies Used
+### Current Limitations
+- Limited training data per industry reduces potential diversity and detail.
+- Requires manual validation to ensure high-quality outputs.
 
-- **PyTorch**: For flexible, GPU-accelerated neural network modeling
-- **Hugging Face Transformers**: GPT-2 fine-tuning and NLP tokenization
-- **scikit-learn & NumPy**: For preprocessing, evaluation, and metric tracking
+### Future Enhancements
+- Expand dataset significantly for enhanced generalizability and diversity.
+- Integrate large pre-trained language models (e.g., GPT-based) to further boost realism and contextual accuracy.
+- Implement interactive user interfaces (e.g., Streamlit) to allow easy real-time resume customization and export.
 
-## 📈 Future Directions
+---
 
-- Extend labeled training datasets to further enhance model robustness and output diversity
-- Evaluate generated resumes against real-world ATS parsing and keyword-matching systems
-- Explore integration with transformer-based language models for hybrid architectures
+## 🚀 Recent Updates & Experimentation (April 2025)
 
-## 📖 References
-- Brock et al. (2019). *Large Scale GAN Training for High Fidelity Natural Image Synthesis.* [arXiv](https://arxiv.org/abs/1809.11096)
-- Mirza and Osindero (2014). *Conditional Generative Adversarial Nets.* [arXiv](https://arxiv.org/abs/1411.1784)
+- Successfully integrated explicit attention mechanisms within CGAN architecture, significantly improving the coherence and contextual relevance of generated resume bullets.
+- Enhanced industry-conditioned performance, validated through qualitative and quantitative assessments.
 
-## 🚧 Project Status
+---
 
-Actively developing and experimenting with various GAN architectures and training strategies. Contributions and suggestions are welcome.
+## ✅ Conclusion
+
+This project demonstrates the practical value and efficiency of combining conditional generative modeling and attention mechanisms for resume customization. By generating targeted, industry-specific resume content, this approach streamlines the application process, allowing job seekers to quickly produce tailored, high-impact resumes. Future developments will focus on further enhancing realism, usability, and adaptability across a broader range of professional fields.
+
+---
+## 📚 References
+
+- Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2014). [Generative Adversarial Nets](https://arxiv.org/abs/1406.2661). *Advances in Neural Information Processing Systems*, 2672-2680.
+- Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). [Attention is All You Need](https://arxiv.org/abs/1706.03762). *Advances in Neural Information Processing Systems*, 5998-6008.
+
+---
+## Author
+
+**John Grier** 
+MS Data Science Candidate, Illinois Tech
+GitHub: J-Grier
+
+*Note: The main modeling notebook (`Attention_CGAN_Resume_Generator.ipynb`) is not included in this repository. For access, please contact the author directly.*
+
+---
+
+## 📂 Project Structure
+
+attention-grabbing-resumes/
+│
+├── Notebooks/
+│   └── Attention_CGAN_Resume_Generator.ipynb     # Main model implementation and experiments
+│
+├── Utils/
+│   └── preprocess.py                             # Custom preprocessing functions
+│
+├── README.md                                     # Project overview, instructions, and summary
+├── requirements.txt                              # Environment dependencies
+└── data/                                         # Training datasets and examples
+
+## 🛠️ Setup and Requirements
+
+### Requirements
+See `requirements.txt` for all package dependencies. Typical requirements include:
+
+```bash
+torch
+torchvision
+numpy
+pandas
+scikit-learn
+nltk
 
