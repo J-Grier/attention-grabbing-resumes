@@ -120,7 +120,7 @@ GitHub: J-Grier
 ---
 
 ## 📂 Project Structure
-
+```
 attention-grabbing-resumes/
 │
 ├── Notebooks/
@@ -132,6 +132,7 @@ attention-grabbing-resumes/
 ├── README.md                                     # Project overview, instructions, and summary
 ├── requirements.txt                              # Environment dependencies
 └── data/                                         # Training datasets and examples
+```
 
 ## 🛠️ Setup and Requirements
 
