@@ -39,6 +39,31 @@ The CGAN was conditioned on simple prompts reflecting job titles and industries.
 
 <div align="center"> <table> <tr> <th>Prompt: "Senior Accountant in Finance"</th> <th>Prompt: "Software Developer in Tech"</th> <th>Prompt: "Farmer in Agriculture"</th> </tr> <tr> <td><img src="images/CGANFinance.png" alt="Finance Resume" width="300"/></td> <td><img src="images/CGANSD.png" alt="Tech Resume" width="300"/></td> <td><img src="images/CGANFarmer.png" alt="Agriculture Resume" width="300"/></td> </tr> </table> </div>
 
+<details>
+<summary>🧾 Actual Prompt Texts Used</summary>
+
+<pre><code># Finance (used with category_name = 'Finance')
+prompt_text = (
+    "Professional experience in Finance:\n"
+    "Senior Accountant with extensive experience in accounting, financial analysis, and management.\n"
+    "Experience includes:\n"
+)
+
+# Tech (no explicit category label)
+prompt_text = (
+    "Professional experience in Tech:\n"
+    "Software Developer skilled in Python, machine learning, NLP, and cloud technologies:\n• "
+)
+
+# Agriculture (no explicit category label)
+prompt_text = (
+    "Professional experience in Agriculture:\n"
+    "Farmer skilled in crop management, livestock care, sustainable farming, and equipment maintenance:\n• "
+)
+</code></pre>
+
+</details>
+
 ---
 
 ### 🔍 Common Issues Observed
